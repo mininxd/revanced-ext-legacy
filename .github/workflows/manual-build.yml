@@ -58,8 +58,8 @@ jobs:
           sudo wget "https://www.dropbox.com/scl/fi/lmv8q744obzdts4rly18c/youtube-revanced_v16.40.36-5-32Bit.apk?rlkey=ssodcq0e5zft15d2fmqt53ret&st=b50eim4i&dl=1"
           sudo wget "https://www.dropbox.com/scl/fi/c7voj11hzyofu6gu5jb1f/youtube-revanced_v16.40.36-5-64Bit.apk?rlkey=v66enff02qi76w6rjdh0je50m&st=tl3hsja5&dl=1"
           tree ./
-          mv "https://www.dropbox.com/scl/fi/lmv8q744obzdts4rly18c/youtube-revanced_v16.40.36-5-32Bit.apk?rlkey=ssodcq0e5zft15d2fmqt53ret&st=b50eim4i&dl=1" rvx_v16.40.36-ARM7.apk
-          mv "https://www.dropbox.com/scl/fi/c7voj11hzyofu6gu5jb1f/youtube-revanced_v16.40.36-5-64Bit.apk?rlkey=v66enff02qi76w6rjdh0je50m&st=tl3hsja5&dl=1" rvx_v16.40.36-ARM8.apk
+          mv "youtube-revanced_v16.40.36-5-32Bit.apk?rlkey=ssodcq0e5zft15d2fmqt53ret&st=b50eim4i&dl=1" rvx_v16.40.36-ARM7.apk
+          mv "youtube-revanced_v16.40.36-5-64Bit.apk?rlkey=v66enff02qi76w6rjdh0je50m&st=tl3hsja5&dl=1" rvx_v16.40.36-ARM8.apk
 
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@v2
