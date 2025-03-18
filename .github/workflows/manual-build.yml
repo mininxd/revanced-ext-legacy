@@ -54,11 +54,10 @@ jobs:
 
       - name: Download APK
         run: |
-          mkdir apk
           sudo apt install -y curl wget unzip zip
-          wget -O ./apk/rvx_v16.40.36-ARM7.apk "https://www.dropbox.com/scl/fi/lmv8q744obzdts4rly18c/youtube-revanced_v16.40.36-5-32Bit.apk?rlkey=ssodcq0e5zft15d2fmqt53ret&st=b50eim4i&dl=1"
-          wget -O ./apk/rvx_v16.40.36-ARM8.apk "https://www.dropbox.com/scl/fi/c7voj11hzyofu6gu5jb1f/youtube-revanced_v16.40.36-5-64Bit.apk?rlkey=v66enff02qi76w6rjdh0je50m&st=tl3hsja5&dl=1"
-          ls -R ./
+          wget -O ./build/rvx_v16.40.36-ARM7.apk "https://www.dropbox.com/scl/fi/lmv8q744obzdts4rly18c/youtube-revanced_v16.40.36-5-32Bit.apk?rlkey=ssodcq0e5zft15d2fmqt53ret&st=b50eim4i&dl=1"
+          wget -O ./build/rvx_v16.40.36-ARM8.apk "https://www.dropbox.com/scl/fi/c7voj11hzyofu6gu5jb1f/youtube-revanced_v16.40.36-5-64Bit.apk?rlkey=v66enff02qi76w6rjdh0je50m&st=tl3hsja5&dl=1"
+          ls -R ./ && tree ./
     
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@v2
@@ -67,8 +66,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: |
             ./build/*
-            ./apk/*.apk
-          release_name: ReVanced
+          release_name: ReVanced Legacy
           tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           file_glob: true
           overwrite: true
