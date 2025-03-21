@@ -57,7 +57,7 @@ jobs:
           sudo apt install -y curl wget unzip zip
           wget -O ./build/rvx_v16.40.36-ARM7.apk "https://www.dropbox.com/scl/fi/lmv8q744obzdts4rly18c/youtube-revanced_v16.40.36-5-32Bit.apk?rlkey=ssodcq0e5zft15d2fmqt53ret&st=b50eim4i&dl=1"
           wget -O ./build/rvx_v16.40.36-ARM8.apk "https://www.dropbox.com/scl/fi/c7voj11hzyofu6gu5jb1f/youtube-revanced_v16.40.36-5-64Bit.apk?rlkey=v66enff02qi76w6rjdh0je50m&st=tl3hsja5&dl=1"
-          wget -O ./build/youtube-revanced-extended-v17.34.36-all.apk "https://www.dropbox.com/scl/fi/kjyy3qtirexuqbkygovpn/youtube-revanced-extended-v17.34.36-all-debug.apk?rlkey=gvkcbxo9g90tf7no42vmtwali&st=d8xevd7f&dl=1"
+          wget -O ./build/youtube-revanced-extended-v17.34.36-all-debug.apk "https://www.dropbox.com/scl/fi/kjyy3qtirexuqbkygovpn/youtube-revanced-extended-v17.34.36-all-debug.apk?rlkey=gvkcbxo9g90tf7no42vmtwali&st=d8xevd7f&dl=1"
           ls -R ./ && tree ./
     
       - name: Upload modules to release
